@@ -1,0 +1,19 @@
+const Discord = require('discord.js');
+const client = new Discord.Client();
+const ayarlar = require('./ayarlar.json');
+
+var prefix = ayarlar.prefix;
+
+client.on('ready', () => {
+  console.log(`Botun olan ${client.user.tag} sunucuya giriş yaptı ve artık aktif!`);
+});
+
+client.on('message', msg => {
+  if (msg.content.toLowerCase() === 'sa') {
+    msg.reply(' :heart: Aleyküm Selam Yıldırım Ailesine Hoş Geldin :heart: ');
+  }
+
+
+});
+
+client.login('NTgzMDkyNzU1MjY2NDA0Mzcy.XO3Vnw.5DDO7g84KhMzcj0x66qGIDFdrXU');
